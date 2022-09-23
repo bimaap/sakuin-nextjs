@@ -5,6 +5,10 @@ A frontend program for Sakuin Application.
 A e-wallet which transfer and topup money.
 
 ### [Design](https://www.figma.com/file/9h19u8PoQbeaXpSPaOCqY9/Zwallet---Client?node-id=0%3A1)
+
+### Deploy
+Click [here](https://sakuin-nextjs-zj53.vercel.app/) to see Sakuin website.
+
 <div>
     <img src="/screenshoot/landingpage.PNG" height="300"/>
     <img src="/screenshoot/login.PNG" height="300"/>
