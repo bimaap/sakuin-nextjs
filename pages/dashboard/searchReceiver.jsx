@@ -24,7 +24,7 @@ export default function Home(){
         }else{
             dispatch(getAllUsersAuth({token, page: page? page:1, limit: 8, search: search? search:'', sort: 'firstName'}))
         }
-    }, [page, search])
+    }, [page, search, dispatch, router, token])
 
     const dataAllUsers = useSelector((state) => state.getAllUsers.data);
 
@@ -54,10 +54,10 @@ export default function Home(){
                                 }
                             </Formik>
                             <div className="d-flex flex-column gap-3 nv-h-60">
-                                {dataAllUsers.data?.length? dataAllUsers.data.map(e=>{
+                                {dataAllUsers.data?.length? dataAllUsers.data.map((e, i)=>{
                                     return(
                                         // <Link onClick={() => Cookies.set("receiverId", e.id)} href={{ pathname: '/dashboard/transfer', query: { id: e.id} }}>
-                                            <div className="d-flex justify-content-between align-items-center nv-card nv-bc-white p-2 rounded" onClick={()=>onClickReceiver(e.id)}>
+                                            <div key={i} className="d-flex justify-content-between align-items-center nv-card nv-bc-white p-2 rounded" onClick={()=>onClickReceiver(e.id)}>
                                                 <div className="d-flex gap-2">
                                                     {e.image? <Image className="rounded-3" src={`https://res.cloudinary.com/dd1uwz8eu/image/upload/v1653276449/${e.image}`} width={40} height={40} alt='user' />:<Image className="rounded-3" src={default_image} width={40} height={40} alt='user' />}
                                                     <div className="d-flex flex-column justify-content-center">

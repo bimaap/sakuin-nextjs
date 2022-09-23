@@ -22,7 +22,7 @@ export default function Home(){
         }else{
             dispatch(getTransactionsAuth({token, page: page? page:1, limit: 8, filter: 'MONTH'}))
         }
-    }, [page])
+    }, [page, dispatch, router, token])
 
     const dataTransactions = useSelector((state) => state.getTransactions.data);
 
@@ -41,9 +41,9 @@ export default function Home(){
                                 </select>
                             </div>
                             <div className="d-flex flex-column gap-3 nv-h-60">
-                                {dataTransactions.data?.length? dataTransactions.data.map(e=>{
+                                {dataTransactions.data?.length? dataTransactions.data.map((e, i)=>{
                                     return(
-                                        <div className="d-flex justify-content-between align-items-center nv-card nv-bc-white p-2 rounded">
+                                        <div key={i} className="d-flex justify-content-between align-items-center nv-card nv-bc-white p-2 rounded">
                                             <div className="d-flex gap-2">
                                                 {e.image? <Image className="rounded-3" src={`https://res.cloudinary.com/dd1uwz8eu/image/upload/v1653276449/${e.image}`} width={40} height={40} alt='user' />:<Image className="rounded-3" src={default_image} width={40} height={40} alt='user' />}
                                                 <div className="d-flex flex-column justify-content-center">

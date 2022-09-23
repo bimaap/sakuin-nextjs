@@ -39,7 +39,7 @@ export default function Home(){
         }else{
             dispatch(getUserAuth({token, id}))
         }
-    }, [])
+    }, [router, dispatch, token, id])
 
     const transferDone = () =>{
         const amount = amountCookies

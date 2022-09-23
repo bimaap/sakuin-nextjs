@@ -42,7 +42,7 @@ export default function Home(){
         }else{
             dispatch(getUserAuth({token, id}))
         }
-    }, [])
+    }, [router, token, dispatch, id])
 
     return(
         <>

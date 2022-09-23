@@ -104,7 +104,7 @@ export default function Home(props){
         }else{
             dispatch(getProfileAuth({token, id}))
         }
-    }, [])
+    }, [router, dispatch, token, id])
     const dataProfile = useSelector((state) => state.getProfile.data);
 
     const onLogout = async () => {

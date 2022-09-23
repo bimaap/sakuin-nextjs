@@ -26,7 +26,7 @@ export default function Home(){
             dispatch(getProfileAuth({token, id}))
             dispatch(getTransactionsAuth({token, page:'1', limit:'5', filter:'MONTH'}))
         }
-    }, [])
+    }, [dispatch, id, router, token])
     const dataProfile = useSelector((state) => state.getProfile.data);
     const dataTransactions = useSelector((state) => state.getTransactions.data);
 
@@ -78,9 +78,9 @@ export default function Home(){
                                     </Link>
                                 </div>
                                 <div className="d-flex flex-column gap-3">
-                                    {dataTransactions?.data?.length? dataTransactions.data.map(e=>{
+                                    {dataTransactions?.data?.length? dataTransactions.data.map((e, i)=>{
                                         return(
-                                            <div className="d-flex justify-content-between align-items-center nv-card nv-bc-white p-2 rounded">
+                                            <div key={i} className="d-flex justify-content-between align-items-center nv-card nv-bc-white p-2 rounded">
                                                 <div className="d-flex gap-2">
                                                     {e.image? <Image className="rounded-3" src={`https://res.cloudinary.com/dd1uwz8eu/image/upload/v1653276449/${e.image}`} width={40} height={40} alt='user' />:<Image className="rounded-3" src={default_image} width={40} height={40} alt='user' />}
                                                     <div className="d-flex flex-column justify-content-center">

@@ -32,7 +32,7 @@ export default function Home(){
         }else{
             // dispatch(getUserAuth({token, id}))
         }
-    }, [])
+    }, [router, token])
 
     const editPasswordSchema = Yup.object().shape({
         oldPassword: Yup.string().min(8, 'Password must be at least 8 characters').required('Required'),

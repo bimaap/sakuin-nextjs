@@ -83,22 +83,22 @@ export default function SetPin(){
                             <div>
                                 <div className="d-flex justify-content-between">
                                     <div className="nv-input nv-input-pin nv-bc-white d-flex">
-                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxlength="1" placeholder="_" type="text" name="pin1" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
+                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxLength="1" placeholder="_" type="text" name="pin1" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
                                     </div>
                                     <div className="nv-input nv-input-pin nv-bc-white d-flex">
-                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxlength="1" placeholder="_" type="text" name="pin2" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
+                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxLength="1" placeholder="_" type="text" name="pin2" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
                                     </div>
                                     <div className="nv-input nv-input-pin nv-bc-white d-flex">
-                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxlength="1" placeholder="_" type="text" name="pin3" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
+                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxLength="1" placeholder="_" type="text" name="pin3" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
                                     </div>
                                     <div className="nv-input nv-input-pin nv-bc-white d-flex">
-                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxlength="1" placeholder="_" type="text" name="pin4" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
+                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxLength="1" placeholder="_" type="text" name="pin4" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
                                     </div>
                                     <div className="nv-input nv-input-pin nv-bc-white d-flex">
-                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxlength="1" placeholder="_" type="text" name="pin5" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
+                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxLength="1" placeholder="_" type="text" name="pin5" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
                                     </div>
                                     <div className="nv-input nv-input-pin nv-bc-white d-flex">
-                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxlength="1" placeholder="_" type="text" name="pin6" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
+                                        <input className="nv-f-h8 nv-weight-700 nv-c-primary text-center" maxLength="1" placeholder="_" type="text" name="pin6" onKeyPress={(event) => checkNumber(event)} onChange={props.handleChange} />
                                     </div>
                                 </div>
                                 <span className="nv-f-h10 text-danger" type="invalid">{Object.keys(props.errors).length? 'Pin cannot be empty':null}</span>

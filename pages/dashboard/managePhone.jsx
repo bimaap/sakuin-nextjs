@@ -28,7 +28,7 @@ export default function Home(){
         }else{
             // dispatch(getUserAuth({token, id}))
         }
-    }, [])
+    }, [router, token])
 
     const editSchema = Yup.object().shape({
         noTelp: Yup.number().required('Required')

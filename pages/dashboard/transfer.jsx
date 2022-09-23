@@ -27,7 +27,7 @@ export default function Home(){
         }else{
             dispatch(getUserAuth({token, id}))
         }
-    }, [])
+    }, [dispatch, router, id, token])
 
     const checkNumber = (event) => {
         !(/[0-9]/.test(event.key))&& event.preventDefault()
