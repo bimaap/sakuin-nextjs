@@ -9,7 +9,7 @@ A e-wallet which transfer and topup money.
     <img src="/screenshoot/landingpage.PNG" height="300"/>
     <img src="/screenshoot/login.PNG" height="300"/>
     <img src="/screenshoot/home.PNG" height="300"/>
-    <img src="/screenshoot/transfer.PGN" height="300"/>
+    <img src="/screenshoot/transfer.PNG" height="300"/>
 </div>
 
 ### Built With
